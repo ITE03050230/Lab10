@@ -1,12 +1,6 @@
-all: MultiThread03 connection
+all: MultiThread02
 
-MultiThread03: MultiThread03.c
-	gcc MultiThread03.c -o MultiThread03 -lpthread
-
-connection: connection.o
-	gcc -o connection connection.o
-
-connection.o: connection.c
-	gcc -c connection.c
+MultiThread01: MultiThread02.c
+	gcc MultiThread02.c -o MultiThread02 -lpthread
 clean:
-rm *.o multithread03
+rm *.o MultiThread02
